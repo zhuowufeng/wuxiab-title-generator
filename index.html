@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>江湖称号生成�?/title>
+<title>江湖称号生成�?/title>
 <style>
 /* ===== 基础 ===== */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -53,7 +53,7 @@ body{
 .particle{position:absolute;width:3px;height:3px;background:rgba(232,213,184,0.3);border-radius:50%;animation:drift linear infinite}
 @keyframes drift{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
 
-/* ===== 主容�?===== */
+/* ===== 主容�?===== */
 .container{max-width:520px;margin:0 auto;padding:20px 16px 40px;position:relative}
 
 /* ===== 头部 ===== */
@@ -70,7 +70,7 @@ body{
 }
 .header .sub span{display:inline-block;margin:0 8px}
 
-/* ===== 输入�?===== */
+/* ===== 输入�?===== */
 .input-section{
   background:linear-gradient(135deg,rgba(40,30,20,0.9),rgba(30,22,15,0.9));
   border:1px solid rgba(200,170,120,0.15);
@@ -218,7 +218,7 @@ body{
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* ===== 响应�?===== */
+/* ===== 响应�?===== */
 @media(max-width:480px){
   .header h1{font-size:26px;letter-spacing:4px}
   .container{padding:16px 12px 30px}
@@ -242,22 +242,22 @@ body{
 <div class="container">
   <!-- 头部 -->
   <div class="header">
-    <span class="icon">🗡�?/span>
+    <span class="icon">🗡�?/span>
     <h1>江湖称号</h1>
-    <p class="sub"><span>�?/span> 输入你的名字 · 测你的江湖称�?<span>�?/span></p>
+    <p class="sub"><span>�?/span> 输入你的名字 · 测你的江湖称�?<span>�?/span></p>
   </div>
 
-  <!-- 输入�?-->
+  <!-- 输入�?-->
   <div class="input-section">
-    <p class="hint">✍️ 输入姓名，AI 为你生成独一无二的江湖称�?/p>
+    <p class="hint">✍️ 输入姓名，AI 为你生成独一无二的江湖称�?/p>
     
     <div class="name-input-wrap">
       <input type="text" id="nameInput" placeholder="输入你的名字..." maxlength="10" autocomplete="off">
     </div>
 
     <div class="style-select">
-      <button class="style-btn active" data-style="武侠">🗡�?武侠�?/button>
-      <button class="style-btn" data-style="修仙">�?修仙�?/button>
+      <button class="style-btn active" data-style="武侠">🗡�?武侠�?/button>
+      <button class="style-btn" data-style="修仙">�?修仙�?/button>
     </div>
 
     <button class="btn-generate" id="btnGenerate" onclick="generate()">
@@ -276,25 +276,25 @@ body{
     <div class="card" id="resultCard">
       <div class="texture"></div>
       <div class="card-icon">⚔️</div>
-      <div class="card-title" id="cardTitle">「一剑霜寒十四州�?/div>
-      <div class="card-name" id="cardName">—�?张三</div>
+      <div class="card-title" id="cardTitle">「一剑霜寒十四州�?/div>
+      <div class="card-name" id="cardName">—�?张三</div>
       <div class="divider"></div>
-      <div class="card-rank" id="cardRank">🌟 一代宗�?/div>
-      <div class="card-detail" id="cardDetail">剑法通神，名动天下，武林中无人不知无人不�?/div>
-      <div class="seal">江湖<br>�?/div>
+      <div class="card-rank" id="cardRank">🌟 一代宗�?/div>
+      <div class="card-detail" id="cardDetail">剑法通神，名动天下，武林中无人不知无人不�?/div>
+      <div class="seal">江湖<br>�?/div>
       <div class="watermark">jianghu.app</div>
     </div>
 
     <div class="actions">
       <button onclick="copyTitle()">📋 复制称号</button>
       <button onclick="downloadCard()">💾 保存卡片</button>
-      <button onclick="generate()">🔄 再算一�?/button>
+      <button onclick="generate()">🔄 再算一�?/button>
     </div>
   </div>
 
   <!-- 底部 -->
   <div class="footer">
-    测一测你的江湖称�?· 分享给朋友一起来�?🎯
+    测一测你的江湖称�?· 分享给朋友一起来�?🎯
   </div>
 </div>
 
@@ -323,7 +323,7 @@ document.querySelectorAll('.style-btn').forEach(btn => {
   };
 });
 
-// ===== 回车键触�?=====
+// ===== 回车键触�?=====
 document.getElementById('nameInput').onkeydown = function(e){
   if(e.key === 'Enter') generate();
 };
@@ -341,7 +341,7 @@ function showToast(msg){
 // ===== 生成 =====
 async function generate(){
   const name = document.getElementById('nameInput').value.trim();
-  if(!name){ showToast('请先输入你的名字�?); return; }
+  if(!name){ showToast('请先输入你的名字�?); return; }
   
   const style = document.querySelector('.style-btn.active').dataset.style;
   const btn = document.getElementById('btnGenerate');
@@ -349,7 +349,7 @@ async function generate(){
   const result = document.getElementById('resultSection');
   
   btn.disabled = true;
-  btn.textContent = '推演�?...';
+  btn.textContent = '推演�?...';
   result.classList.remove('show');
   loading.classList.add('show');
   
@@ -363,22 +363,22 @@ async function generate(){
     if(data.error){ showToast(data.error); return; }
     
     // 填充结果
-    document.getElementById('cardTitle').textContent = data.full_title || `�?{data.title}」`;
-    document.getElementById('cardName').textContent = `—�?${data.name}`;
+    document.getElementById('cardTitle').textContent = data.full_title || `�?{data.title}」`;
+    document.getElementById('cardName').textContent = `—�?${data.name}`;
     document.getElementById('cardRank').textContent = `🌟 ${data.rank || '江湖新秀'}`;
     document.getElementById('cardDetail').textContent = data.detail || '';
     
     // 切换图标
-    document.querySelector('.card-icon').textContent = data.style === '修仙' ? '�? : '⚔️';
+    document.querySelector('.card-icon').textContent = data.style === '修仙' ? '�? : '⚔️';
     
-    // 大号字体长标�?    const titleEl = document.getElementById('cardTitle');
+    // 大号字体长标�?    const titleEl = document.getElementById('cardTitle');
     titleEl.style.fontSize = (data.full_title && data.full_title.length > 12) ? '22px' : '28px';
     
     loading.classList.remove('show');
     result.classList.add('show');
     
   } catch(e){
-    showToast('网络出问题了，再试试�?);
+    showToast('网络出问题了，再试试�?);
     loading.classList.remove('show');
   } finally {
     btn.disabled = false;
@@ -392,7 +392,7 @@ async function copyTitle(){
                document.getElementById('cardName').textContent;
   try{
     await navigator.clipboard.writeText(text);
-    showToast('�?已复制！快去分享给朋友吧');
+    showToast('�?已复制！快去分享给朋友吧');
   } catch {
     showToast('复制失败，请手动复制');
   }
@@ -400,7 +400,7 @@ async function copyTitle(){
 
 // ===== 下载卡片 =====
 function downloadCard(){
-  showToast('📸 请截图保存卡片（右键→另存为�?);
+  showToast('📸 请截图保存卡片（右键→另存为�?);
 }
 
 // ===== 初始焦点 =====
