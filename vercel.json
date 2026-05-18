@@ -1,1 +1,12 @@
-{"functions":{"api/generate.mjs":{"maxDuration":10}},"buildCommand":null,"outputDirectory":"."}
+{
+  "functions": {
+    "api/generate.mjs": {
+      "maxDuration": 10
+    }
+  },
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
